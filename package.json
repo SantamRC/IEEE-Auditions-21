@@ -4,9 +4,11 @@
   "description": "IEEE Auditions '21 Website",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    
+    "start": "node server.js"
   },
+  "engines": {
+    "node": "10.16.0"
+},
   "author": "Santam",
   "license": "ISC",
   "dependencies": {
