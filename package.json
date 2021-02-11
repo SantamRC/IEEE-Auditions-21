@@ -4,6 +4,7 @@
   "description": "IEEE Auditions '21 Website",
   "main": "server.js",
   "scripts": {
+    "build":"cd client && npm run build",
     "start": "node server.js"
   },
   "engines": {
