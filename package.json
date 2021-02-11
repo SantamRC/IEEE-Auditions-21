@@ -9,9 +9,6 @@
     "client-install":"cd client && npm install",
     "heroku-postbuild":"npm run client-install && npm run build"
   },
-  "engines": {
-    "node": "10.16.0"
-},
   "author": "Santam",
   "license": "ISC",
   "dependencies": {
