@@ -40,6 +40,16 @@ app.post('/submit',(req,res)=>{
    }).catch(err=>res.send(err))
 })
 
+app.post('/admin',(req,res)=>{
+   form.find()
+   .then(contact=>{
+       res.json(contact)
+   })
+   .catch(err=>{
+       res.send(err)
+   })
+})
+
 app.listen(port, () => {
    console.log('Server is up on port: '+port);
 });
