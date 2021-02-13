@@ -4,14 +4,17 @@
   "description": "IEEE Auditions '21 Website",
   "main": "server.js",
   "scripts": {
-    "build":"cd client && npm run build",
+    "build": "cd client && npm run build",
     "start": "node server.js",
-    "client-install":"cd client && npm install",
-    "heroku-postbuild":"npm run client-install && npm run build"
+    "client-install": "cd client && npm install",
+    "heroku-postbuild": "npm run client-install && npm run build"
   },
   "author": "Santam",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.4",
+    "mongoose": "^5.11.16"
   }
 }

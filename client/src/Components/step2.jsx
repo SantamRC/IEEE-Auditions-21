@@ -42,7 +42,9 @@ export default function ButtonAppBar(props) {
         <TextField 
         className={classes.text} 
         id="standard-basic" 
-        label="Answer" ></TextField>
+        label="Answer"
+        onChange={props.q1}
+         ></TextField>
         <br/>
         <Typography variant="h6" className={classes.text}>
            Question 2: Lorem ipsum dolor sit amet.
@@ -50,7 +52,9 @@ export default function ButtonAppBar(props) {
         <TextField 
         className={classes.text} 
         id="standard-basic" 
-        label="Answer" ></TextField>
+        label="Answer"
+        onChange={props.q2}
+         ></TextField>
         <br/>
         <Button 
         className={classes.text}
@@ -62,6 +66,7 @@ export default function ButtonAppBar(props) {
         className={classes.submit}
         variant="contained"
         color="primary"
+        onClick={props.submit}
         >Submit</Button>
     </div>
   );

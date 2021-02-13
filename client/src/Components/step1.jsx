@@ -35,22 +35,30 @@ export default function Step1(props) {
       <TextField 
         className={classes.text} 
         id="standard-basic" 
-        label="Enter Full Name" ></TextField>
+        label="Enter Full Name" 
+        onChange={props.name}
+        ></TextField>
         <br/>
         <TextField 
         className={classes.text} 
         id="standard-basic" 
-        label="Enter Phone Number" ></TextField>
+        label="Enter Phone Number"
+        onChange={props.phn}
+        ></TextField>
         <br/>
         <TextField 
         className={classes.text} 
         id="standard-basic" 
-        label="Department" ></TextField>
+        label="Department"
+        onChange={props.dept}
+        ></TextField>
         <br/>
         <TextField 
         className={classes.text} 
         id="standard-basic" 
-        label="Year of Study" ></TextField>
+        label="Year of Study" 
+        onChange={props.yr}
+        ></TextField>
         <br/>
         <Button 
         className={classes.text}
