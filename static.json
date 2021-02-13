@@ -2,7 +2,8 @@
     "root": "build/",
     "clean_urls": false,
     "routes": {
-      "/**": "index.html"
+      "/**": "index.html",
+      "/admin/**":"index.html"
     }
   }
   
