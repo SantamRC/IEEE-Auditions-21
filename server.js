@@ -20,8 +20,8 @@ if(process.env.NODE_ENV=="Production"){
    })
 }
 
-//const mongodb= process.env.MONGODB_URI || "mongodb://localhost/auditions"
-const mongodb="mongodb+srv://santam:santam12345@cluster.q6ixt.mongodb.net/form?retryWrites=true&w=majority"
+const mongodb= process.env.MONGODB_URI || "mongodb://localhost/auditions"
+//const mongodb="mongodb+srv://santam:santam12345@cluster.q6ixt.mongodb.net/form?retryWrites=true&w=majority"
 mongoose.connect(mongodb, {
    useNewUrlParser: true,
    useUnifiedTopology: true
