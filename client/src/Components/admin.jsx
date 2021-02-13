@@ -33,7 +33,7 @@ export default function Admin() {
     let [rows,setData]=useState([{}]);
 
     useEffect(()=>{
-        axios.post('https://ieeeauditions21.herokuapp.com/admin')
+        axios.post(process.env.RESPONSES,)
         .then(res=>{
             res.data.forEach(e=>{
                 setData(rows=>[...rows,
@@ -76,7 +76,7 @@ export default function Admin() {
                 </TableHead>
                 <TableBody>
                 {rows.map((row,ind) => (
-                    <TableRow key={row.ind}>
+                    <TableRow key={ind}>
                     <TableCell component="th" scope="row">
                         {row.Name}
                     </TableCell>
