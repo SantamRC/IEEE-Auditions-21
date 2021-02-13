@@ -50,7 +50,7 @@ export default class Form extends Component{
             Q1:this.state.Q1,
             Q2:this.state.Q2,
         }
-        axios.post(process.env.FORM_SUBMIT,form)
+        axios.post("https://ieeeauditions21.herokuapp.com/submit",form)
         .then(res=>console.log(res.data))
     }
     render(){
