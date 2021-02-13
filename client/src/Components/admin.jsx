@@ -33,7 +33,7 @@ export default function Admin() {
     let [rows,setData]=useState([{}]);
 
     useEffect(()=>{
-        axios.post(process.env.RESPONSES,)
+        axios.post(`${process.env.RESPONSES}`, )
         .then(res=>{
             res.data.forEach(e=>{
                 setData(rows=>[...rows,
@@ -46,7 +46,7 @@ export default function Admin() {
                     'Q2':e.Q2
                 }
                 ])
-                console.log(e.Name)
+                console.log(process.env)
             })
             //setData(data=>[...data,res.data])
             
