@@ -33,7 +33,7 @@ export default function Admin() {
     let [rows,setData]=useState([{}]);
 
     useEffect(()=>{
-        axios.post('http://localhost:4000/admin/')
+        axios.post('https://ieeeauditions21.herokuapp.com/admin')
         .then(res=>{
             res.data.forEach(e=>{
                 setData(rows=>[...rows,
