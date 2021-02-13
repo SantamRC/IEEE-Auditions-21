@@ -4,16 +4,22 @@ import S2 from './step2'
 
 
 export default class Form extends Component{
-    
-        state={
-            step:1
-        }
-        increase=()=>{
-            this.setState({step:this.state.step+1})
-        }
-        decrease=()=>{
-            this.setState({step:this.state.step-1})
-        }
+
+    state={
+        step:1,
+        Name: '',
+        phone: '',
+        dept:'',
+        yr:'',
+        Q1:'',
+        Q2:''
+    }
+    increase=()=>{
+        this.setState({step:this.state.step+1})
+    }
+    decrease=()=>{
+        this.setState({step:this.state.step-1})
+    }
     render(){
         switch(this.state.step){
             case 1:
