@@ -1,7 +1,11 @@
 import React,{Component} from 'react'
 import S1 from './step1'
 import S2 from './step2'
+import S3 from './step3'
+import S4 from './step4'
+import S5 from './step5'
 import axios from 'axios'; 
+
 
 export default class Form extends Component{
     constructor(props){
@@ -13,7 +17,8 @@ export default class Form extends Component{
             Dept:'',
             Year:'',
             Q1:'',
-            Q2:''
+            Q2:'',
+
         }
     }
     
@@ -68,12 +73,37 @@ export default class Form extends Component{
         case 2:
             return(
                 <S2 
+                step={this.increase} 
                 dec={this.decrease}
                 q1={this.onChangeQ1}
-                q2={this.onChangeQ2}
-                submit={this.onSubmit}
+                
                 />
             )
+        case 3:
+            return(
+                <S3 
+                step={this.increase} 
+                dec={this.decrease}                   
+                q2={this.onChangeQ2}
+                />
+            )
+        case 4:
+            return(
+                <S4 
+                step={this.increase} 
+                dec={this.decrease}                   
+                q2={this.onChangeQ2}
+                />
+            )
+        case 5:
+            return(
+                <S5 
+                step={this.increase} 
+                dec={this.decrease}                   
+                q2={this.onChangeQ2}
+                />
+            )
+                
     }
     }
 }

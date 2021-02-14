@@ -12,6 +12,7 @@
   "author": "Santam",
   "license": "ISC",
   "dependencies": {
+    "array-move": "^3.0.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongodb": "^3.6.4",

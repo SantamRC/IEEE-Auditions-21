@@ -37,7 +37,7 @@ export default function ButtonAppBar(props) {
       </AppBar>
       <Container maxWidth="sm">
       <Typography  variant="h6" className={classes.text}>
-           Question 1: Describe yourself in 5 words.
+           Question 2: Lorem ipsum dolor sit amet.
           </Typography>
         <TextField 
         className={classes.text} 
@@ -45,6 +45,7 @@ export default function ButtonAppBar(props) {
         label="Answer"
         onChange={props.q1}
          ></TextField>
+      
         <br/>
         <Button 
         className={classes.text}
@@ -56,8 +57,8 @@ export default function ButtonAppBar(props) {
         className={classes.submit}
         variant="contained"
         color="primary"
-        onClick={props.step}
-        >Next</Button>
+        onClick={props.submit}
+        >Submit</Button>
         </Container>
     </div>
   );

@@ -37,13 +37,13 @@ export default function ButtonAppBar(props) {
       </AppBar>
       <Container maxWidth="sm">
       <Typography  variant="h6" className={classes.text}>
-           Question 1: Describe yourself in 5 words.
+           Question 2: Write 3 of your strengths and 3 of your weaknesses.
           </Typography>
         <TextField 
         className={classes.text} 
         id="standard-basic" 
         label="Answer"
-        onChange={props.q1}
+        onChange={props.q2}
          ></TextField>
         <br/>
         <Button 
