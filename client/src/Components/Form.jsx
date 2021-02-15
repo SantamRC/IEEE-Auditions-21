@@ -21,6 +21,10 @@ export default class Form extends Component{
             Year:'',
             Q1:'',
             Q2:'',
+            Q3:'',
+            Q4:'',
+            Q5:'',
+            Q6:'',
 
         }
     }
@@ -38,16 +42,28 @@ export default class Form extends Component{
         this.setState({Phone:e.target.value})
     }
     onChangeDept=(e)=>{
-        this.setState({Dept:e.target.value})
+        this.setState({Dept:e})
     }
     onChangeYear=(e)=>{
-        this.setState({Year:e.target.value})
+        this.setState({Year:e})
     }
     onChangeQ1=(e)=>{
         this.setState({Q1:e.target.value})
     }
     onChangeQ2=(e)=>{
         this.setState({Q2:e.target.value})
+    }
+    onChangeQ3=(e)=>{
+        this.setState({Q3:e})
+    }
+    onChangeQ4=(e)=>{
+        this.setState({Q4:e})
+    }
+    onChangeQ5=(e)=>{
+        this.setState({Q5:e.target.value})
+    }
+    onChangeQ6=(e)=>{
+        this.setState({Q6:e.target.value})
     }
     onSubmit=()=>{
         const form={
@@ -57,6 +73,10 @@ export default class Form extends Component{
             Year:this.state.Year,
             Q1:this.state.Q1,
             Q2:this.state.Q2,
+            Q3:this.state.Q3,
+            Q4:this.state.Q4,
+            Q5:this.state.Q5,
+            Q6:this.state.Q6,
         }
         axios.post("https://ieeeauditions21.herokuapp.com/submit",form)
         .then(res=>console.log(res.data))
@@ -95,7 +115,7 @@ export default class Form extends Component{
                 <S4 
                 step={this.increase} 
                 dec={this.decrease}                   
-                q2={this.onChangeQ2}
+                q3={this.onChangeQ3}
                 />
             )
         case 5:
@@ -103,7 +123,7 @@ export default class Form extends Component{
                 <S5 
                 step={this.increase} 
                 dec={this.decrease}                   
-                q2={this.onChangeQ2}
+                q4={this.onChangeQ4}
                 />
             )
         case 6:
@@ -111,15 +131,15 @@ export default class Form extends Component{
                 <S6 
                 step={this.increase} 
                 dec={this.decrease}                   
-                q2={this.onChangeQ2}
+                q5={this.onChangeQ5}
                 />
             )
         case 7:
             return(
                 <S10 
                 step={this.increase} 
-                dec={this.decrease}                   
-                q2={this.onChangeQ2}
+                sub={this.onSubmit}                   
+                q6={this.onChangeQ6}
                 />
             )
                 

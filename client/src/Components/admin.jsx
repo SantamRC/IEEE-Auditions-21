@@ -43,7 +43,11 @@ export default function Admin() {
                     'Dept':e.Dept,
                     'Year':e.Year,
                     'Q1':e.Q1,
-                    'Q2':e.Q2
+                    'Q2':e.Q2,
+                    'Q3':e.Q3,
+                    'Q4':e.Q4,
+                    'Q5':e.Q5,
+                    'Q6':e.Q6,
                 }
                 ])
                 console.log(process.env)
@@ -72,6 +76,10 @@ export default function Admin() {
                     <TableCell align="right">Year</TableCell>
                     <TableCell align="right">Q1</TableCell>
                     <TableCell align="right">Q2</TableCell>
+                    <TableCell align="right">Q3</TableCell>
+                    <TableCell align="right">Q4</TableCell>
+                    <TableCell align="right">Q5</TableCell>
+                    <TableCell align="right">Q6</TableCell>
                 </TableRow>
                 </TableHead>
                 <TableBody>
@@ -85,6 +93,10 @@ export default function Admin() {
                     <TableCell align="right">{row.Year}</TableCell>
                     <TableCell align="right">{row.Q1}</TableCell>
                     <TableCell align="right">{row.Q2}</TableCell>
+                    <TableCell align="right">{row.Q3}</TableCell>
+                    <TableCell align="right">{row.Q4}</TableCell>
+                    <TableCell align="right">{row.Q5}</TableCell>
+                    <TableCell align="right">{row.Q6}</TableCell>
                     </TableRow>
                 ))}
                 </TableBody>

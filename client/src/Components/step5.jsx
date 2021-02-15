@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function ButtonAppBar(props) {
+export default function Step5(props) {
   const classes = useStyles();
  
   const [items, setItems] = useState([
@@ -48,6 +48,12 @@ export default function ButtonAppBar(props) {
   const onDrop = ({ removedIndex, addedIndex }) => {
     setItems(items => arrayMove(items, removedIndex, addedIndex));
   };
+
+  const next=()=>{
+    props.step();
+    props.q4(`${items[0].text} >${items[1].text} >${items[2].text} >${items[3].text}`);
+    console.log(`${items[0].text} >${items[1].text} >${items[2].text} >${items[3].text}`)
+  }
 
   return (
     <div className={classes.root}>
@@ -89,7 +95,7 @@ export default function ButtonAppBar(props) {
         className={classes.submit}
         variant="contained"
         color="primary"
-        onClick={props.step}
+        onClick={next}
         >Next</Button>
         </Container>
     </div>

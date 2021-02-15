@@ -35,13 +35,19 @@ export default function Step1(props) {
   const [value, setValue] = useState(1);
   const [dept,setDept]=useState("");
 
-  const handleChange = (event) => {
+  const changeYr = (event) => {
     setValue(event.target.value);
   };
 
   const changeDept=(e)=>{
     setDept(e.target.value);
   }
+
+   const next=()=>{
+    props.step();
+    props.dept(dept)
+    props.yr(value)
+   }
 
   return (
     <div className={classes.root}>
@@ -84,7 +90,7 @@ export default function Step1(props) {
         <br/>
         <FormControl className={classes.text} component="fieldset">
           <FormLabel component="legend">Year of Study</FormLabel>
-          <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange} >
+          <RadioGroup aria-label="gender" name="gender1" value={value} onChange={changeYr} >
             <FormControlLabel value="1" control={<Radio />} label="1st Year" />
             <FormControlLabel value="2" control={<Radio />} label="2nd Year" />
           </RadioGroup>
@@ -94,7 +100,7 @@ export default function Step1(props) {
         className={classes.text}
         variant="contained"
         color="primary"
-        onClick={props.step}
+        onClick={next}
         >Next</Button>
         </Container>
     </div>

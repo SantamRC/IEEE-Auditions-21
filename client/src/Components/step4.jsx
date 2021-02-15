@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -31,8 +31,13 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function ButtonAppBar(props) {
+export default function Step4(props) {
   const classes = useStyles();
+  const [deadlines,setDead]=useState(0);
+  const [spon,setSpon]=useState(0);
+  const [team,setTeam]=useState(0);
+  const [perf,setPerf]=useState(0);
+  
   const marks = [
     {
       value: 0,
@@ -48,6 +53,13 @@ export default function ButtonAppBar(props) {
     return `${value}`;
   }
 
+  const next=()=>{
+    //props.q3(`${deadlines},${spon},${team},${perf}`)
+    props.q3()
+    console.log(`${deadlines},${spon},${team},${perf}`)
+    props.step()
+  }
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -59,7 +71,7 @@ export default function ButtonAppBar(props) {
       </AppBar>
       <Container maxWidth="sm">
       <Typography  variant="h6" className={classes.text}>
-           Question 4: Rate yourself out of 10.
+           Question 3: Rate yourself out of 10.
         </Typography>
         <Typography  variant="h6" className={classes.text}>
            a) Meeting deadlines
@@ -70,6 +82,7 @@ export default function ButtonAppBar(props) {
         getAriaValueText={valuetext}
         aria-labelledby="discrete-slider-always"
         step={1}
+        onChange={(e,n)=>{setDead(n)}}
         marks={marks}
         max={10}
         valueLabelDisplay="on"
@@ -84,6 +97,7 @@ export default function ButtonAppBar(props) {
         getAriaValueText={valuetext}
         aria-labelledby="discrete-slider-always"
         step={1}
+        onChange={(e,n)=>{setSpon(n)}}
         marks={marks}
         max={10}
         valueLabelDisplay="on"
@@ -98,6 +112,7 @@ export default function ButtonAppBar(props) {
         getAriaValueText={valuetext}
         aria-labelledby="discrete-slider-always"
         step={1}
+        onChange={(e,n)=>{setTeam(n)}}
         marks={marks}
         max={10}
         valueLabelDisplay="on"
@@ -112,6 +127,7 @@ export default function ButtonAppBar(props) {
         getAriaValueText={valuetext}
         aria-labelledby="discrete-slider-always"
         step={1}
+        onChange={(e,n)=>{setPerf(n)}}
         marks={marks}
         max={10}
         valueLabelDisplay="on"
@@ -127,7 +143,7 @@ export default function ButtonAppBar(props) {
         className={classes.submit}
         variant="contained"
         color="primary"
-        onClick={props.step}
+        onClick={next}
         >Next</Button>
         </Container>
     </div>

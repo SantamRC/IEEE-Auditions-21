@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function ButtonAppBar(props) {
+export default function Step6(props) {
   const classes = useStyles();
 
   return (
@@ -54,7 +54,7 @@ export default function ButtonAppBar(props) {
         className={classes.text} 
         id="standard-basic" 
         label="Answer"
-        onChange={props.q1}
+        onChange={props.q5}
          ></TextField>
         <br/>
         <Button 

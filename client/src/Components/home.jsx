@@ -37,7 +37,6 @@ export default function Home(props){
         buttonText="Login with Google"
         onSuccess={onSuccess}
         onFailure={onFailure}
-        
         isSignedIn={false}
         />
     )

@@ -45,7 +45,7 @@ export default function ButtonAppBar(props) {
   const submit=()=>{
     setStop(false);
     setPause(false);
-    //props.submit();
+    props.sub()
   }
 
   return (
@@ -67,7 +67,7 @@ export default function ButtonAppBar(props) {
         className={classes.text} 
         id="standard-basic" 
         label="Answer"
-        onChange={props.q1}
+        onChange={props.q6}
          ></TextField>
          <Lottie 
               className={classes.lottie}
