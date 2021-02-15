@@ -37,7 +37,7 @@ export default function Home(props){
         buttonText="Login with Google"
         onSuccess={onSuccess}
         onFailure={onFailure}
-        cookiePolicy={"single_host_origin"}
+        
         isSignedIn={false}
         />
     )
