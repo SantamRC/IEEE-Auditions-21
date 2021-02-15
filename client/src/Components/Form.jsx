@@ -4,6 +4,9 @@ import S2 from './step2'
 import S3 from './step3'
 import S4 from './step4'
 import S5 from './step5'
+import S6 from './step6'
+import S8 from './step8'
+import S10 from './step10'
 import axios from 'axios'; 
 
 
@@ -98,6 +101,22 @@ export default class Form extends Component{
         case 5:
             return(
                 <S5 
+                step={this.increase} 
+                dec={this.decrease}                   
+                q2={this.onChangeQ2}
+                />
+            )
+        case 6:
+            return(
+                <S6 
+                step={this.increase} 
+                dec={this.decrease}                   
+                q2={this.onChangeQ2}
+                />
+            )
+        case 7:
+            return(
+                <S10 
                 step={this.increase} 
                 dec={this.decrease}                   
                 q2={this.onChangeQ2}

@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -6,8 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Container from '@material-ui/core/Container';
-import Lottie from 'react-lottie';
-import success from '../Animations/5047-success.json'
+import Image from 'material-ui-image'
+import img from '../Assets/ques.png'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,34 +19,17 @@ const useStyles = makeStyles((theme) => ({
   text:{
     marginTop: 30,
   },
+  image:{
+    width:100
+  },
   submit:{
     marginTop: 30,
     marginLeft:10
-  },
-  lottie:{
-    position:'absolute'
   }
 }));
 
 export default function ButtonAppBar(props) {
   const classes = useStyles();
-  const [stop,setStop]=useState(false);
-  const [pause,setPause]=useState(false);
-
-  const defaultOptions = {
-    loop: false,
-    autoplay: true, 
-    animationData: success,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
-  };
-
-  const submit=()=>{
-    setStop(false);
-    setPause(false);
-    //props.submit();
-  }
 
   return (
     <div className={classes.root}>
@@ -59,24 +42,20 @@ export default function ButtonAppBar(props) {
       </AppBar>
       <Container maxWidth="sm">
       <Typography  variant="h6" className={classes.text}>
-           Question 6: There is an event on Wed development on 15th November at LG 22. Prepare a write up 
-           of 3-4 sentences that could be used for publicity of the event. Come with a name for the event.
-            You can mention one or two activities that may be in the event.
+           Question 5: There are 4 people and 4 hats as shown. A can see B and C. B can see C. 
+           There is a wall between C and D. 2 hats are white and 2 are black. Who amongst the 4 people would 
+           be able to predict the colour of his hat? / riddle 2
           </Typography>
+          <Image
+          className={classes.image}
+            src={img}
+            />
         <TextField 
         className={classes.text} 
         id="standard-basic" 
         label="Answer"
         onChange={props.q1}
          ></TextField>
-         <Lottie 
-              className={classes.lottie}
-              options={defaultOptions}
-              height={400}
-              width={400}
-              isStopped={stop}
-              isPaused={pause}
-            />
         <br/>
         <Button 
         className={classes.text}
@@ -88,8 +67,8 @@ export default function ButtonAppBar(props) {
         className={classes.submit}
         variant="contained"
         color="primary"
-        onClick={submit}
-        >Submit</Button>
+        onClick={props.step}
+        >Next</Button>
         </Container>
     </div>
   );
