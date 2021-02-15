@@ -8,6 +8,9 @@ import TextField from '@material-ui/core/TextField';
 import Container from '@material-ui/core/Container';
 import Lottie from 'react-lottie';
 import success from '../Animations/5047-success.json'
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import { useHistory } from "react-router"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,6 +35,8 @@ export default function ButtonAppBar(props) {
   const classes = useStyles();
   const [stop,setStop]=useState(false);
   const [pause,setPause]=useState(false);
+  const [subm,setSubm]=useState(false)
+  let history = useHistory()
 
   const defaultOptions = {
     loop: false,
@@ -46,6 +51,11 @@ export default function ButtonAppBar(props) {
     setStop(false);
     setPause(false);
     props.sub()
+    setSubm(true)
+  }
+
+  const finish=()=>{
+    history.push("/end")
   }
 
   return (
@@ -69,14 +79,22 @@ export default function ButtonAppBar(props) {
         label="Answer"
         onChange={props.q6}
          ></TextField>
-         <Lottie 
+         <Popup open={subm} position="right center">
+            <div>Form Submitted</div>
+            <Button  
+            color="primary"
+            variant="contained"
+            onClick={finish}
+            >Finish</Button>
+          </Popup>
+         {/* <Lottie 
               className={classes.lottie}
               options={defaultOptions}
               height={400}
               width={400}
               isStopped={stop}
               isPaused={pause}
-            />
+            /> */}
         <br/>
         <Button 
         className={classes.text}

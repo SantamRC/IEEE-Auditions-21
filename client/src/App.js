@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Homepage from './Components/Homepage/homepage'
 import Test from './Components/app1'
 import Home from './Components/home'
+import End from './Components/thank'
 
 function App() {
   const[loggedIn,setlog]=React.useState(false)
@@ -18,6 +19,7 @@ function App() {
           <Route path='/test' exact component={Test} />
           <Route path='/form' exact component={Form} />
           <Route path='/admin' exact component={Admin} />
+          <Route path='/end' exact component={End} />
         </Switch>
       </div>
       </BrowserRouter>

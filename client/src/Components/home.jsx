@@ -20,7 +20,7 @@ export default function Home(props){
 
     function handleClick() {
         history.push("/form")
-      }
+    }
 
     const onSuccess=()=>{
         console.log("Successfully Logged In");
