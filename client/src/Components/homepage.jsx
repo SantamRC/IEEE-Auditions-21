@@ -2,7 +2,7 @@ import React from 'react'
 import video from '../Assets/tech.mp4'
 import './homepage.css'
 import MediaQuery from 'react-responsive'
-import videoM from '../Assets/tech-mobile.mp4'
+import videoM from '../Assets/tech_mobile.mp4'
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
