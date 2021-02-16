@@ -1,0 +1,299 @@
+@import url(//fonts.googleapis.com/css?family=Vibur);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
+
+html,body{
+  height:100%;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.container{
+    height: 60vh;
+    background: #112 url('../Assets/bg.jpg')  center no-repeat;
+    background-size:cover;
+}
+
+li{
+    list-style: none;
+    padding: 1vw;
+}
+
+a, a:visited, a:active{
+    color: white;
+    text-decoration: none;
+    
+}
+
+a:hover {
+    color: wheat;
+    text-decoration: underline;
+}
+
+header {
+    color: white;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: black; */
+
+}
+nav{
+    display: flex;
+    align-items:center;
+    justify-content:space-around;
+    /* width: 50vw; */
+    /* font-size: 2vh; */
+    max-width: 70vw;
+    flex-wrap: wrap;
+    font-size: 2vh;
+}
+
+
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1vw;
+
+}
+
+
+body {
+  /* background: #112 url(//images.weserv.nl/?url=i.imgur.com/6QJjYMe.jpg)  center no-repeat;
+  background-size:cover; */
+  margin:0
+}
+.logo {
+  text-align: center;
+  width: 65%;
+  height: 250px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+   user-select: none;
+}
+
+.logo b{
+  font: 400 10vh "Vibur";
+  color: #fee;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+}
+.logo b span{
+  animation: blink linear infinite 2s;
+}
+.logo b span:nth-of-type(2){
+  animation: blink linear infinite 3s;
+}
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79%{
+     color: #333;
+  }
+  80% {
+    
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
+
+
+/* follow me @nodws */
+#btn-twtr{
+  clear:both;
+  color:#fff;
+  border:2px solid;
+  border-radius:3px;
+  text-align:center;
+  text-decoration:none;
+  display:block;
+  font-family:sans-serif;
+  font-size:14px;
+  width:13em;
+  padding:5px 10px;
+  font-weight:600;
+  position:absolute;
+  bottom:20px;
+  left:0;
+  right:0;
+  margin:0 auto;
+  background:rgba(0,0,0,0.2);
+  box-shadow:0 0 0px 3px rgba(0,0,0,0.2);
+  opacity:0.4
+}#btn-twtr:hover{color:#fff;opacity:1}
+
+
+/*  ------------------------------------------------------------------------------ */
+
+
+.container2{
+    height: 40vh;
+    background: #112 url('../Assets/bg.jpg')  center no-repeat;
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    padding: 2vh;
+    margin-top: 0;
+    border-radius: 4vh;
+    border: none;
+    font-size: 2vh;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-bottom: 2px solid #ff4444;
+    border-right: 2px solid #ff4444;
+    color: #f08a8a;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+p{
+  text-align: center;
+}
+
+
+.container3 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text {
+  display: block;
+  margin-top: 75px;
+  margin-left: -30px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* why join us code --------------------- */
+
+
+
+.container4{
+  background: url('../Assets/why.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wpic {
+  font-size: 5vh;
+  font-weight: bold;
+  color: #000;
+  background: rgba(255,255,255,0.5);
+  margin-top: 10vh;
+  padding: 2vh;
+  border-radius: 5vh;
+}
+
+.zind {
+  z-index: 100;
+}
