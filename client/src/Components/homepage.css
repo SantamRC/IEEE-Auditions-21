@@ -1,0 +1,29 @@
+.videoM{
+    width: 90vh;
+    position: fixed;
+    top: -35vh;
+    left: -20vh;
+}
+.textM{
+    z-index: 2;
+    text-align: center;
+  font-size: 2em;
+  
+    position: absolute;
+    color: rgb(65, 203, 228);
+  font-family: Monoton;
+  -webkit-transition: text-shadow 1s linear;
+  -moz-transition: text-shadow 1s linear;
+  -ms-transition: text-shadow 1s linear;
+  -o-transition: text-shadow 1s linear;
+  transition: text-shadow 1s linear;
+  text-shadow: 0 0 10px rgb(240, 240, 240);
+}
+
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+.video{
+    width:100vw;
+    position: fixed;
+    
+}

@@ -53,21 +53,14 @@ export default function Home(props){
                 </ul>
             </nav>
         </header>
-
-
-
-
     <div class="logo"><b>I<span>EE</span>E<span>SB</span> Auditions</b></div>
-
     </div>
-
     <div class="container2">
         <a href="https://ieeeauditions21.herokuapp.com/form" class="zind">
             <button id="btn" onCl>
                 Register Now
             </button>
         </a>
-
         <p>
             Come Join Us  <br/>
         </p>
