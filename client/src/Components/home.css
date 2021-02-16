@@ -31,26 +31,6 @@ a:hover {
     text-decoration: underline;
 }
 
-header {
-    color: white;
-    width: 100vw;
-    display: flex;
-    justify-content: flex-end;
-    /* background-color: black; */
-
-}
-nav{
-    display: flex;
-    align-items:center;
-    justify-content:space-around;
-    /* width: 50vw; */
-    /* font-size: 2vh; */
-    max-width: 70vw;
-    flex-wrap: wrap;
-    font-size: 2vh;
-}
-
-
 
 ul {
     list-style: none;

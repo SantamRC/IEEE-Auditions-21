@@ -16,6 +16,7 @@ export default class Form extends Component{
         this.state={
             step:1,
             Name: '',
+            Email:'',
             Phone: '',
             Dept:'',
             Year:'',
@@ -40,6 +41,9 @@ export default class Form extends Component{
     }
     onChangePhone=(e)=>{
         this.setState({Phone:e.target.value})
+    }
+    onChangeEmail=(e)=>{
+        this.setState({Email:e.target.value})
     }
     onChangeDept=(e)=>{
         this.setState({Dept:e})
@@ -87,6 +91,7 @@ export default class Form extends Component{
             return(
                 <S1 
                 step={this.increase} 
+                mail={this.onChangeEmail}
                 name={this.onChangeName} 
                 phn={this.onChangePhone}
                 dept={this.onChangeDept}

@@ -6,6 +6,7 @@ import Homepage from './Components/homepage'
 import Test from './Components/app1'
 import Home from './Components/home'
 import End from './Components/thank'
+import Header from './Components/header'
 
 function App() {
   const[loggedIn,setlog]=React.useState(false)
@@ -14,11 +15,13 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <div>
+        <Header />
         <Switch>
           <Route path='/' exact component={()=><Home log={setlog} />} />
           <Route path='/test' exact component={Homepage} />
           <Route path='/form' exact component={Form} />
           <Route path='/admin' exact component={Admin} />
+          <Route path='/header' exact component={Header} />
           <Route path='/end' exact component={End} />
         </Switch>
       </div>

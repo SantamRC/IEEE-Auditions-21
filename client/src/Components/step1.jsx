@@ -59,13 +59,21 @@ export default function Step1(props) {
         </Toolbar>
       </AppBar>
       <Container maxWidth="sm">
-      <TextField 
+     
+        <TextField 
         className={classes.text} 
         id="standard-basic" 
         label="Enter Full Name" 
         onChange={props.name}
         ></TextField>
         <br/>
+        <TextField 
+        className={classes.text} 
+        id="standard-basic" 
+        label="Enter Email ID" 
+        onChange={props.mail}
+        ></TextField>
+        <br />
         <TextField 
         className={classes.text} 
         id="standard-basic" 

@@ -1,9 +1,16 @@
 const mongoose=require('mongoose');
+require('mongoose-type-email');
 const schema=mongoose.Schema;
+
 
 let form= new schema({
     Name:{
         type:String
+    },
+    Email:{
+        type:mongoose.SchemaTypes.Email,
+        unique:true,
+        required:true
     },
     Phone:{
         type:String
