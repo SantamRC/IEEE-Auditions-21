@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   radio:{
     marginTop: 30,
     display:"flex",
+    width:100,
     flexDirection:"horizontal"
   }
 }));
@@ -83,7 +84,7 @@ export default function Step1(props) {
         <br/>
         <FormControl className={classes.radio} component="fieldset">
           <FormLabel component="legend">Department</FormLabel>
-          <RadioGroup aria-label="gender" name="gender1" value={dept} onChange={changeDept} >
+          <RadioGroup className={classes.radio} aria-label="gender" name="gender1" value={dept} onChange={changeDept} >
             <FormControlLabel value="ce" control={<Radio />} label="CE" />
             <FormControlLabel value="ch" control={<Radio />} label="CH" />
             <FormControlLabel value="bt" control={<Radio />} label="BT" />
