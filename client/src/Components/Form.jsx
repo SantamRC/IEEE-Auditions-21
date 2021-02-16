@@ -72,6 +72,7 @@ export default class Form extends Component{
     onSubmit=()=>{
         const form={
             Name:this.state.Name,
+            Email:this.state.Email,
             Phone:this.state.Phone,
             Dept:this.state.Dept,
             Year:this.state.Year,
